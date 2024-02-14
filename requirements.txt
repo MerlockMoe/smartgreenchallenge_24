@@ -20,7 +20,7 @@ MarkupSafe==2.0.1
 matplotlib==3.5.1
 networkx==2.6.3
 numpy==1.22.1
-opencv-python
+opencv-python==4.5.5.62
 opencv-python-headless==4.5.5.62
 optuna==2.10.0
 packaging==21.3
