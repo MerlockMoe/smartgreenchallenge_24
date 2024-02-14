@@ -1,11 +1,24 @@
 
+#build
 sudo docker build . -t weedseg
 
-sudo docker run --runtime nvidia -it --rm --network=host dustynv/l4t-pytorch:r36.2.0
 
+
+#compose
 sudo docker compose up
 
 #add an interactive shell
 sudo docker compose run --rm pytorch-gpu
-sudo docker-compose run pytorch-gpu sh
 
+cp model_unet_resnet34_dil0_bilin1_retrained.pt /etc/joe/data/UAVWeedSegmentation
+
+
+#predict
+python3 save_patches.py
+python3 predict_testset.py [model_path] [subset]
+# example
+python3 save_patches.py
+python3 predict_testset.py models/model_unet_resnet34_dil0_bilin1_retrained.pt test
+
+#old
+sudo docker run --runtime nvidia -it --rm --network=host dustynv/l4t-pytorch:r36.2.0
