@@ -1,0 +1,11 @@
+
+sudo docker build .
+
+sudo docker run --runtime nvidia -it --rm --network=host dustynv/l4t-pytorch:r36.2.0
+
+sudo docker compose up
+
+#add an interactive shell
+sudo docker compose run --rm pytorch-gpu
+sudo docker-compose run pytorch-gpu sh
+
