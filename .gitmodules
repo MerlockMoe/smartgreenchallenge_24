@@ -1,3 +1,6 @@
 [submodule "UAVWeedSegmentation"]
 	path = UAVWeedSegmentation
 	url = https://github.com/grimmlab/UAVWeedSegmentation.git
+[submodule "data/UAVWeedSegmentation"]
+	path = data/UAVWeedSegmentation
+	url = https://github.com/grimmlab/UAVWeedSegmentation.git
