@@ -1,5 +1,5 @@
 
-sudo docker build .
+sudo docker build . -t weedseg
 
 sudo docker run --runtime nvidia -it --rm --network=host dustynv/l4t-pytorch:r36.2.0
 
