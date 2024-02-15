@@ -11,7 +11,7 @@ sudo docker compose up
 sudo docker compose run --rm pytorch-gpu
 
 cp model_unet_resnet34_dil0_bilin1_retrained.pt /etc/joe/data/UAVWeedSegmentation
-
+apt-get update && apt-get install libgl1
 
 #predict
 python3 save_patches.py
