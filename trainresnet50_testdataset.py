@@ -39,7 +39,7 @@ for images, labels in train_ds.take(1):
   for var in range(6):
     ax = plt.subplot(3, 3, var + 1)
     plotter_lib.imshow(images[var].numpy().astype("uint8"))
-    plotter_lib.axis("off")*
+    plotter_lib.axis("off")
 
 demo_resnet_model = Sequential()
 pretrained_model_for_demo= tflow.keras.applications.ResNet50(include_top=False,
