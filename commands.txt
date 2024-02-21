@@ -10,7 +10,7 @@ sudo docker compose up
 #add an interactive shell
 sudo docker compose run --rm pytorch-gpu
 
-cp model_unet_resnet34_dil0_bilin1_retrained.pt /etc/joe/data/UAVWeedSegmentation
+cp model_unet_resnet34_dil0_bilin1_retrained.pt /etc/joe/data/UAVWeedSegmentation/models
 apt-get update && apt-get install libgl1
 
 #predict
@@ -19,6 +19,3 @@ python3 predict_testset.py [model_path] [subset]
 # example
 python3 save_patches.py
 python3 predict_testset.py models/model_unet_resnet34_dil0_bilin1_retrained.pt test
-
-#old
-sudo docker run --runtime nvidia -it --rm --network=host dustynv/l4t-pytorch:r36.2.0

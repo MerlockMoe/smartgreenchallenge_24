@@ -10,5 +10,6 @@ services:
       - "8000:8000"
     volumes:
       - "./data:/etc/joe"
+      - "model_unet_resnet34_dil0_bilin1_retrained.pt:/etc/joe/data/UAVWeedSegmentation/models"
     ipc: host
 
