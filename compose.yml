@@ -1,8 +1,8 @@
 services:
   pytorch-gpu:
-    command: 
+#    command: 
 #      - mkdir /etc/joe/data/UAVWeedSegmentation/models
-      - cp model_unet_resnet34_dil0_bilin1_retrained.pt /etc/joe/data/UAVWeedSegmentation/models
+#      - cp model_unet_resnet34_dil0_bilin1_retrained.pt /etc/joe/data/UAVWeedSegmentation/models
     image: weedseg
     deploy:
       resources:
