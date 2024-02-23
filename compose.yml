@@ -1,8 +1,6 @@
 services:
   pytorch-gpu:
-#    command: 
-#      - mkdir /etc/UAVWeedSegmentation/models
-#      - cp model_unet_resnet34_dil0_bilin1_retrained.pt /etc/UAVWeedSegmentation/models
+    command: apt-get update && apt-get install libgl1
     image: weedseg
     deploy:
       resources:
@@ -17,6 +15,6 @@ services:
       - "8000:8000"
     volumes:
       - "./data:/etc/"
-      - "./models:/etc/UAVWeedSegmentation/models"
+#      - "./models:/etc/UAVWeedSegmentation/models"
     ipc: host
 
