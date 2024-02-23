@@ -17,6 +17,6 @@ services:
       - "8000:8000"
     volumes:
       - "./data:/etc/joe"
-      - "/models:/etc/joe/UAVWeedSegmentation/models"
+      - "./models:/etc/joe/UAVWeedSegmentation/models"
     ipc: host
 
