@@ -16,7 +16,8 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - "./data/UAVWeedSegmentation:/etc/UAVWeedSegmentation"
-      - "./models:/etc/UAVWeedSegmentation/models"
+      - "./data/UAVWeedSegmentation:/etc/sgc/UAVWeedSegmentation"
+      - "./models:/etc/sgc/UAVWeedSegmentation/models"
+      - "/data:/etc/sgc/datasets"
     ipc: host
 
