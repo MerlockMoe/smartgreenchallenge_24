@@ -1,8 +1,8 @@
 services:
   pytorch-gpu:
 #    command: 
-#      - mkdir /etc/joe/UAVWeedSegmentation/models
-#      - cp model_unet_resnet34_dil0_bilin1_retrained.pt /etc/joe/UAVWeedSegmentation/models
+#      - mkdir /etc/UAVWeedSegmentation/models
+#      - cp model_unet_resnet34_dil0_bilin1_retrained.pt /etc/UAVWeedSegmentation/models
     image: weedseg
     deploy:
       resources:
@@ -16,7 +16,7 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - "./data:/etc/joe"
-      - "./models:/etc/joe/UAVWeedSegmentation/models"
+      - "./data:/etc/"
+      - "./models:/etc/UAVWeedSegmentation/models"
     ipc: host
 
