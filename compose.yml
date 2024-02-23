@@ -2,10 +2,13 @@ version: "3"
 services:
   pytorch-gpu:
     image: weedseg
-    devices:
-      - driver: nvidia
-        count: all
-        capabilities: [gpu]
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
     ports:
