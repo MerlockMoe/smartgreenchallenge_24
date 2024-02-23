@@ -14,7 +14,7 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - "./data:/etc/"
+      - "./data:/etc/joe"
 #      - "./models:/etc/UAVWeedSegmentation/models"
     ipc: host
 
